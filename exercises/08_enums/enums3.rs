@@ -51,6 +51,17 @@ impl State {
 
 fn main() {
     // You can optionally experiment here.
+    let message = String::from("This is a test");
+    let mut init_state = State {
+        width: 10,
+        height: 10,
+        position: Point { x: 0, y: 0 },
+        message: String::new(),
+        color: (255, 255, 255),
+        quit: false,
+    };
+    println!("{}", message);
+    init_state.echo(message);
 }
 
 #[cfg(test)]
