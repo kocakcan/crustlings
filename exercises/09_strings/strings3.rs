@@ -1,17 +1,28 @@
 fn trim_me(input: &str) -> &str {
     // TODO: Remove whitespace from both ends of a string.
+    input.trim()
 }
 
 fn compose_me(input: &str) -> String {
     // TODO: Add " world!" to the string! There are multiple ways to do this.
+    format!("{} world!", input)
 }
 
 fn replace_me(input: &str) -> String {
     // TODO: Replace "cars" in the string with "balloons".
+    input.replace("cars", "balloons")
 }
 
 fn main() {
     // You can optionally experiment here.
+    let best_boss = String::from("  Knight Artorias   ");
+    let mut name = String::from("Can");
+    name.push_str(" Kocak");
+    let cars = String::from("cars");
+    let cars = replace_me(&cars);
+    println!("{}", best_boss.trim());
+    println!("{}", cars);
+    println!("{}", name);
 }
 
 #[cfg(test)]
